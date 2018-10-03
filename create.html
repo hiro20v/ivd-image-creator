@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>実行中...</title>
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./common.css">
+</head>
+
+<body>
+
+  <main>
+
+    <div class="container is-fluid">
+
+      <div class="content">
+
+        <a class="button is-primary is-loading" id="backButton">
+        <span class="icon">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span>戻る</span>
+      </a>
+      </div>
+
+      <div class="content is-hidden" id="notificationContent">
+
+        <div class="notification is-warning">
+          <button class="delete" id="closeNotificationButton"></button>
+          <span id="notification"></span>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <progress class="progress is-success" value="0" max="100" id="progress"></progress>
+      </div>
+
+      <div class="content">
+
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-narrow">
+            <figure class="is-marginless has-background-light">
+              <canvas id="canvas_72" width="72" height="72"></canvas>
+              <figcaption>72px</figcaption>
+            </figure>
+          </div>
+          <div class="column is-narrow">
+            <figure class="is-marginless has-background-light">
+              <canvas id="canvas_144" width="144" height="144"></canvas>
+              <figcaption>144px</figcaption>
+            </figure>
+          </div>
+          <div class="column is-narrow">
+            <figure class="is-marginless has-background-light">
+              <canvas id="canvas_288" width="288" height="288"></canvas>
+              <figcaption>288px</figcaption>
+            </figure>
+          </div>
+          <div class="column is-narrow">
+            <figure class="is-marginless has-background-light">
+              <canvas id="canvas_576" width="576" height="576"></canvas>
+              <figcaption>576px</figcaption>
+            </figure>
+          </div>
+          <div class="column is-narrow">
+            <figure class="is-marginless has-background-light">
+              <canvas id="canvas_1152" width="1152" height="1152"></canvas>
+              <figcaption>1152px</figcaption>
+            </figure>
+          </div>
+          <div class="column is-narrow">
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <blockquote>縮小して表示されています。</blockquote>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    window.jQuery = window.$ = require('jquery');
+    var os = require('os');
+    var fs = require('fs-extra');
+    var path = require('path');
+
+    require('./create.js')
+  </script>
+
+  <script>
+  </script>
+
+</body>
+
+</html>

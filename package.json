@@ -1,0 +1,27 @@
+{
+  "name": "ivd-image-creator",
+  "version": "0.1.0",
+  "description": "IVD Image creator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/hiro20v/ivd-image-creator",
+  "keywords": [
+    "Electron",
+    "Bulma",
+    "IVD"
+  ],
+  "author": "hiro20v",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "electron": "^3.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "font-awesome-v5-icons": "^1.0.2",
+    "fs-extra": "^7.0.0",
+    "jquery": "^3.3.1"
+  }
+}

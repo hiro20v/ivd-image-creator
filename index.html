@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>設定</title>
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./common.css">
+</head>
+
+<body>
+
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+
+        <div class="field is-grouped is-grouped-multiline">
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-dark">Node.js</span>
+              <span class="tag is-light" id="nodeVer"></span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-dark">Chromium</span>
+              <span class="tag is-light" id="chromeVer"></span>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-dark">Electron</span>
+              <span class="tag is-light" id="electronVer"></span>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="title">
+          IVD 画像生成
+        </h1>
+        <h2 class="subtitle">
+          異体字の画像を生成します。
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <div class="container is-fluid">
+
+      <div class="content box">
+
+        <h2>書体</h2>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Adobe-Japan1</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="HiraMinProN-W3" id="input_Adobe-Japan1">
+                <span class="icon is-small is-left">
+            <i class="fas fa-font"></i>
+          </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">汎用電子</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="IPAmjMincho" id="input_Hanyo-Denshi">
+                <span class="icon is-small is-left">
+            <i class="fas fa-font"></i>
+          </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">文字情報</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="IPAmjMincho" id="input_Moji_Joho">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-font"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">MSARG</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="(´・ω・`)知らんがな" id="input_MSARG">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-font"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">KRName</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="text" placeholder="(´・ω・`)知らんがな" id="input_KRName">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-font"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <blockquote>
+          出力画像に描画する、CSSフォント名を指定します。<br> 指定フォントは、実行環境にインストールされている必要があります。
+          <br> 同一バリエーションは、後に実行されたコレクションで上書きされます。
+          <br> 指定フォントがグリフを保持していない場合は、バリエーションの出力は行われません。
+        </blockquote>
+
+      </div>
+
+      <div class="content box">
+
+        <h2>サイズ</h2>
+
+        <label class="checkbox"><input type="checkbox" id="input_72">72</label>
+        <label class="checkbox"><input type="checkbox" id="input_144">144</label>
+        <label class="checkbox"><input type="checkbox" id="input_288">288</label>
+        <label class="checkbox"><input type="checkbox" id="input_576">576</label>
+        <label class="checkbox"><input type="checkbox" id="input_1152">1152</label>
+
+        <blockquote>出力する画像サイズを指定します。</blockquote>
+
+      </div>
+
+      <div class="content">
+
+        <a class="button is-fullwidth is-primary" id="createButton">
+        <span class="icon">
+          <i class="far fa-image"></i>
+        </span>
+        <span>作成</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    window.jQuery = window.$ = require('jquery');
+
+    require('./index.js')
+  </script>
+
+</body>
+
+</html>
